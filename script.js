@@ -5,7 +5,7 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
 let shuffledQuestions, currentQuestionIndex
-
+let score = 0
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++
@@ -13,6 +13,7 @@ nextButton.addEventListener('click', () => {
 })
 
 function startGame() {
+  score = 0
   startButton.classList.add('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
@@ -60,7 +61,11 @@ function selectAnswer(e) {
     startButton.innerText = 'Restart'
     document.querySelector('.start-btn').style.background = 'darkblue'
     startButton.classList.remove('hide')
+    setTimeout(function(){alert(`You got ${score} out of ${questions.length} correct`)}, 100)
   }
+  if (selectedButton.dataset = correct) {
+    score++;
+ }
 }
 
 function setStatusClass(element, correct) {
@@ -76,6 +81,7 @@ function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('wrong')
 }
+
 let questions = [
     {
         question: 'Who is the first person in space?',
@@ -105,7 +111,7 @@ let questions = [
         ]
     },
     {
-        question: 'What was the first space flight that laded the first people on the moon?',
+        question: 'What was the first space flight that landed the first people on the moon?',
         answers: [
             {text: 'Apollo 11', correct: true},
             {text: 'Apollo 13', correct: false},
@@ -167,4 +173,45 @@ let questions = [
             {text: 'Saturn', correct: false}
         ]
     },
+    {
+      question: 'Which planet has no moons?',
+      answers: [
+          {text: 'Mercury', correct: true},
+          {text: 'Uranus', correct: false},
+      ]
+    },
+    {
+      question: 'Which of these is the distance between Earth and the centre of the Milky Way galaxy?',
+      answers: [
+        {text: '250 light years', correct: false},
+        {text: '25,000 light years', correct: true},
+      ]
+    },
+    {
+      question: 'Which galaxy is closest to The Milky Way?',
+      answers: [
+        {text: 'Large Magellanic Cloud', correct: false},
+        {text: 'Andromeda', correct: true},
+        {text: 'The SagDEG', correct: false},
+        {text: 'The Canis Major Dwarf', correct: false},
+      ]
+    },
+    {
+      question: 'Which comet passes by Earth every 76 years?',
+      answers: [
+        {text: 'Kohoutek', correct: false},
+        {text: "Halley's Comet", correct: true},
+        {text: 'Hyakutake', correct: false},
+        {text: 'Encke', correct: false},
+      ]
+    },
+    {
+      question: 'Which is the closest start to Earth?',
+      answers: [
+        {text: 'The Sun', correct: true},
+        {text: "Alpha Centauri", correct: false},
+        {text: 'Proxima Centauri', correct: false},
+        {text: "Bernard's Start", correct: false},
+      ]
+    }
 ]
