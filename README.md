@@ -1,8 +1,7 @@
 # Space Trivia
 
 A space themed trivia game.
-
-## [Live Demo](https://iangelfand.github.io/Space-Trivia/)
+[Live Demo](https://iangelfand.github.io/Space-Trivia/)
 
 ## Demo
 
