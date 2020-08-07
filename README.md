@@ -14,7 +14,9 @@ Clone the repository as such:
 git clone https://github.com/IanGelfand/Space-Trivia.git
 ```
 * Use live server to open the trivia game.
+
 or
+
 * Paste the index.html file path into your browser url bar.
 
 ## Contributing
