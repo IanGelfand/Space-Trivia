@@ -8,11 +8,14 @@ A space themed trivia game.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Clone the repository as such:
 
 ```bash
-pip install foobar
+git clone https://github.com/IanGelfand/Space-Trivia.git
 ```
+* Use live server to open the trivia game.
+or
+* Paste the index.html file path into your browser url bar.
 
 ## Contributing
 If you have any questions you would like to add feel free to create a pull request. For major changes, please open an issue first to discuss what you would like to change.
