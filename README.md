@@ -2,9 +2,7 @@
 
 A space themed trivia game.
 
-### [Live Demo](https://iangelfand.github.io/Space-Trivia/)
-
-## Demo
+## [Live Demo](https://iangelfand.github.io/Space-Trivia/)
 
 [![Image from Gyazo](https://i.gyazo.com/306b23a1b679852537a7e1f2a59c90fc.gif)](https://gyazo.com/306b23a1b679852537a7e1f2a59c90fc)
 
