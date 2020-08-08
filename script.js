@@ -3,6 +3,7 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+const music = document.getElementById('music')
 
 let shuffledQuestions, currentQuestionIndex
 let score = 0
@@ -13,6 +14,9 @@ nextButton.addEventListener('click', () => {
 })
 
 function startGame() {
+  //music link - https://www.youtube.com/watch?v=Bok8nLviThg
+  music.play()
+  music.volume = 0.01
   score = 0
   startButton.classList.add('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
@@ -206,12 +210,12 @@ let questions = [
       ]
     },
     {
-      question: 'Which is the closest start to Earth?',
+      question: 'Which is the closest star to Earth?',
       answers: [
         {text: 'The Sun', correct: true},
         {text: "Alpha Centauri", correct: false},
         {text: 'Proxima Centauri', correct: false},
-        {text: "Bernard's Start", correct: false},
+        {text: "Bernard's Star", correct: false},
       ]
     }
 ]
